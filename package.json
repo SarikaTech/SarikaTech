@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "crud app with express and mongo db",
   "main": "server.js",
+  "engines": {
+    "node": "16.13.0"
+    },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",   
+    "build":"webpack"
   },
   "keywords": [
     "crud",

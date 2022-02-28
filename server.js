@@ -37,6 +37,6 @@ app.use("/assets", express.static(__dirname + '/assets'));
 
 app.use('/', require('./server/routes/router'));
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log("port 3000 started");
 })
