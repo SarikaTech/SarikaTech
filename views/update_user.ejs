@@ -1,0 +1,111 @@
+<!-------include header------>
+
+<%- include('include/_header') %>
+<!-------include header------>
+
+<!--------main------->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+<a href="/alluser"><span class="text-gradient">All user</span></a>
+        </div>
+
+<!-----------<form>----------->
+<div class="form-title">
+    <h2 class="text-dark">
+        Update User
+    </h2>
+    <span class="text-light">use the below form to create new user</span>
+</div>
+
+
+
+<form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <input type="hidden" name="id" value="<%=user._id%>"/>
+            <select class="example" name="dropd" >
+                <option name="" value="0" selected>Post applied for</option>
+                <option name="table1" value="<%=user.dropd=='1'?'selected':''%>">Table 1</option>
+                <option name="table2" value="<%=user.dropd=='2'?'selected':''%>">Table 2</option>
+                <option name="table3" value="<%=user.dropd=='3'?'selected':''%>">Table 3</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="name" class="text-light">Name as passport</label>
+           
+            <input type="text" name="name" value="<%=user.name%>" placeholder="Hi user"/>
+        </div>
+        <div class="form-group">
+            <label for="lname" class="text-light">Last name as passport</label>
+            <!-- <input type="hidden" name="id" value="<%=user._id%>"/> -->
+            <input type="text" name="name" value="<%=user.lname%>" placeholder="Hi user"/>
+        </div>
+        <div class="form-group">
+            <label for="date" class="text-light">Date of birth</label>
+           
+            <input type="text" name="date" value="<%=user.date%>" id="datepicker" placeholder="Hi user"/>
+        </div>
+        <div class="form-group">
+            <label for="email" class="text-light">Email</label>
+           
+            <input type="email" name="email" value="<%=user.email%>" placeholder="Hi user"/>
+        </div>
+        <div class="form-group">
+            <label for="coc" class="text-light">COC no</label>
+           
+            <input type="text" name="coc" value="<%=user.coc%>" placeholder="Hi user"/>
+        </div>
+        <div class="form-group">
+            <label for="issued" class="text-light">Issued at</label>
+           
+            <input type="text" name="issued" value="<%=user.issued%>" placeholder="Hi user"/>
+        </div>
+    
+    
+        <!-- <div class="form-group">
+            <label for="email" class="text-light">Gender</label>
+           <div class="radio inline">
+            <input type="radio" name="gender" value="Male" <%=user.gender=='Male'?'checked':''%>/>
+            <label for="gender" class="text-light">Male</label>
+        </div>
+        <div class="radio inline">
+            <input type="radio" name="gender" value="Female"  <%=user.gender=='Female'?'checked':''%>/>
+            <label for="gender" class="text-light">Female</label>
+        </div>
+            
+        </div> -->
+        <!-- <div class="form-group">
+            <label for="Status" class="text-light">Status</label>
+           <div class="radio inline">
+            <input type="radio" name="status" value="Active" <%=user.status=='Active'?'checked':''%>/>
+            <label for="gender" class="text-light">Active</label>
+        </div>
+        <div class="radio inline">
+            <input type="radio" name="status" value="Inactive" <%=user.status=='Inactive'?'checked':''%>/>
+            <label for="status" class="text-light">Inactive</label>
+        </div>
+            
+        </div> -->
+        <div class="form-group">
+            <label for="avatar" class="text-light">attach</label>
+        <input type="input" name="avatar" value="<%=user.path%>"/>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+         
+         </div>
+    </div>
+    </form>
+    
+    </div>
+</main>
+
+        <!--------main------->
+
+
+
+<!-------include _footer------>
+
+<%- include('include/_footer') %>
+<!-------include _footer------>

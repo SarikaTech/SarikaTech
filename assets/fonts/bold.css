@@ -1,0 +1,59 @@
+/* Webfont: PFHandbookPro-Bold */
+
+
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('Roboto-Bold.eot');
+    src: url('Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-Bold-bold.woff2') format('woff2'),
+         url('Roboto-Bold-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+  font-family: 'Baloo2-ExtraBold';
+  src: url('Baloo2-ExtraBold.eot');
+  src:  url('Baloo2-ExtraBold.woff2') format('woff2'),
+       url('Baloo2-ExtraBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Baloo2-Bold';
+  src: url('Baloo2-Bold.eot');
+  src: url('Baloo2-Bold.eot?#iefix') format('embedded-opentype'),
+       url('Baloo2-Bold.woff2') format('woff2'),
+       url('Baloo2-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Raleway-Black';
+  src: url('Raleway-Black.eot');
+  src: url('Raleway-Black.eot?#iefix') format('embedded-opentype'),
+       url('Raleway-Black.woff2') format('woff2'),
+       url('Raleway-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Raleway-ExtraBold';
+  src: url('Raleway-ExtraBold.eot');
+  src: url('Raleway-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('Raleway-ExtraBold.woff2') format('woff2'),
+       url('Raleway-ExtraBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+p {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}

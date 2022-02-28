@@ -1,0 +1,37 @@
+/* Webfont: PFEncoreSansPro-Regular */
+
+
+@font-face {
+  font-family: 'Baloo-Regular';
+  src: url('Baloo2-Regular.eot');
+  src: url('Baloo2-Regular.eot?#iefix') format('embedded-opentype'),
+       url('Baloo2-Regular.woff2') format('woff2'),
+       url('Baloo2-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-variant-numeric:  'Baloo2-Regular';
+  
+
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('Roboto-Regular.eot');
+    src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-Regular.woff2') format('woff2'),
+         url('Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-variant-numeric:  'Roboto-Regular';
+    
+
+}
+@font-face {font-family: "Raleway"; 
+  src: url("314107d2b4fd9c91314be5b4cccb08f6.eot"); 
+  src: url("314107d2b4fd9c91314be5b4cccb08f6.eot?#iefix") format("embedded-opentype"), url("314107d2b4fd9c91314be5b4cccb08f6.woff2") format("woff2"), url("314107d2b4fd9c91314be5b4cccb08f6.woff") format("woff"), url("314107d2b4fd9c91314be5b4cccb08f6.ttf") format("truetype"), url("314107d2b4fd9c91314be5b4cccb08f6.svg#Raleway") format("svg"); 
+}
+
+p {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}

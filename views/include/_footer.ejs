@@ -1,0 +1,153 @@
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+<div class="col-md-2">
+<img class="foot-img" src="assets/img/bottom-logo.png"/>
+</div>
+<div class="col-md-10">
+<p class="footer-para">
+    RPSL No.: MUM 203 / Valid till: 22nd December, 2026 | Copyright 2022
+</p>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script>
+    $("#add_user").submit(function(event){
+    alert("data insertes successfully")
+})
+
+
+$("#update_user").submit(function(event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data = {}
+
+    $.map(unindexed_array, function(n, i){
+        data[n['name']] = n['value']
+    })
+
+
+    var request = {
+        "url" : `http://localhost:3000/api/users/${data.id}`,
+        "method" : "PUT",
+        "data" : data
+    }
+
+    $.ajax(request).done(function(response){
+        alert("Data Updated Successfully!");
+    })
+
+})
+
+if(window.location.pathname == "/"){
+    $ondelete = $(".table tbody td a.delete");
+    $ondelete.click(function(){
+        var id = $(this).attr("data-id")
+
+        var request = {
+            "url" : `http://localhost:3000/api/users/${id}`,
+            "method" : "DELETE"
+        }
+
+        if(confirm("Do you really want to delete this record?")){
+            $.ajax(request).done(function(response){
+                alert("Data Deleted Successfully!");
+                location.reload();
+            })
+        }
+
+    })
+}
+</script>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" >
+    </script>
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker({
+            defaultDate:"09/22/2019"
+        });
+    });
+</script>
+<script>
+    window.onload = function(){
+
+
+// Declare all variables
+  var buttons = document.querySelectorAll(".tabs button");
+	var current_button;
+  var sections = document.querySelectorAll(".tabs section");
+	var current_section;
+
+// show the first tabs
+	buttons[0].classList.add("active");
+	sections[0].classList.add("active");
+
+// set up onclick
+	buttons.forEach(function(element){
+		element.onclick = changeTab;
+	}); // end forEach
+
+// get ".active" button
+function getCurrentButton() {
+	buttons.forEach(function(element){
+		if (element.classList.contains('active')) {
+			current_button = element;
+		} // end if
+	}); // end forEach
+	return current_button;
+} // end getCurrentButton()
+
+// get ".active" section
+function getCurrentSection() {
+	sections.forEach(function(element){
+		if (element.classList.contains('active')) {
+			current_section = element;
+		} // end if
+	}); // end forEach
+	return current_section;
+} // end getCurrentSection()
+
+// remove ".active" from inactive sections
+function hideTab() {
+  console.log("hideTab() has been run");
+  current_section.classList.remove("active");
+	current_button.classList.remove("active");
+} // end hideTab()
+
+// add ".active" to active section
+function showTab(id) {
+  console.log("showTab(id) has been run");
+  sections.forEach(function(element){
+    if (element.id === id) {
+      element.classList.add("active");
+    } // end if
+  }); // end forEach
+} // end showTab(id)
+
+function changeTab() {
+//  console.log("changeTab() has been run");
+	current_button = getCurrentButton();
+	current_section = getCurrentSection();
+	if (this.name !== current_button.name) {
+		this.classList.add("active");
+		hideTab();
+		showTab(this.name);
+	} // end if 
+} // end changeTab()
+
+	
+}; // end window.onload
+</script>
+</body>
+</html>

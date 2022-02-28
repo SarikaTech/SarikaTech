@@ -1,0 +1,20 @@
+/* Webfont: PFHandbookPro-Regular */
+
+
+
+@font-face {
+    font-family: 'pf_handbook_proregular';
+    src: url('pfhandbookpro-regular.eot');
+    src: url('pfhandbookpro-regular.eot?#iefix') format('embedded-opentype'),
+         url('pfhandbookpro-regular.woff2') format('woff2'),
+         url('pfhandbookpro-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+p {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}

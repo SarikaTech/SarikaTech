@@ -1,0 +1,17 @@
+<% for(var i=0; i<users.length; i++){ %>
+<tr>
+    <td><%= i+1 %></td>
+    <td><%= users[i].dropd %></td>
+    <td><%= users[i].name %></td>
+    <td><%= users[i].lname %></td>
+    <td><%= users[i].date %></td>
+    <td><%= users[i].mobile %></td>
+    <td><%= users[i].email %></td>     
+    <td><%= users[i].coc %></td>
+    <td><%= users[i].issued %></td>   
+    <td><%= users[i].avatar %></td>
+
+    <td><a href="/update-user?id=<%=users[i]._id%>" class="ss"><span>edit</span></a>
+        <a data-id=<%=users[i]._id%> class="ss delete">   <span>delete</span></a></td>
+</tr>
+<% } %>
