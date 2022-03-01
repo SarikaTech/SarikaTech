@@ -28,6 +28,7 @@ exports.services=(req, res)=>{
 }
 exports.about=(req, res)=>{
     res.render('about');
+    
 }
 exports.view_devusertest=(req, res)=>{
     //make a get request to users/api

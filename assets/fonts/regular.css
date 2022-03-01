@@ -3,11 +3,11 @@
 
 
 @font-face {
-    font-family: 'pf_handbook_proregular';
-    src: url('pfhandbookpro-regular.eot');
-    src: url('pfhandbookpro-regular.eot?#iefix') format('embedded-opentype'),
-         url('pfhandbookpro-regular.woff2') format('woff2'),
-         url('pfhandbookpro-regular.woff') format('woff');
+    font-family: 'Lato-Regular';
+    src: url('Lato-Regular.eot');
+    src: url('Lato-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Lato-Regular.woff2') format('woff2'),
+         url('Lato-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

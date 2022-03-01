@@ -5,7 +5,14 @@
 @import url(/assets/fonts/light.css);
 @import url(/assets/fonts/encore-regular.css);
 body{
-
+color:#000000 !important;
+font-family: 'Roboto-Regular' !important;
+}
+.banner_h img{
+    height: 400px;
+}
+.activea{
+    border-bottom: 3px solid #FFFFFF
 }
 .form-control{
     background: #FFFFFF !important;
@@ -186,12 +193,17 @@ color: #772778;
     width:100%;
     display: flex;
 }
+.banner-para-span{
+    font-family: Lato-Regular !important;
+    font-size: 26px !important;
+    font-weight: 500 !important;
+}
 .banner-para{
     width: 44%;
     position: absolute;
     top: 27%;
     left: 2%;
-    font-family: Lato !important;
+    font-family: Lato-Bold !important;
     font-style: normal;
     font-weight: 900;
     font-size: 27px;
@@ -227,11 +239,12 @@ img{
     padding: 20px 15px;
     background: #FFFDFD;
 box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.1);
+font-family: 'Lato-Regular' !important;
 }
 .footer-para{
-    font-family: Lato;
+    font-family: 'Lato-Regular' !important;
 font-style: normal;
-font-weight: normal;
+font-weight: 600;
 font-size: 18px;
 text-align: right;
 padding-top: 8px;
@@ -318,6 +331,7 @@ color: #000000;
     }
     .tabs button{
 margin-top: 5px;
+font-weight: 600;
     }
     
     .tabs .content .card{
@@ -330,7 +344,7 @@ margin-top: 5px;
         border-top:0px !important ;
         border-bottom: 0px !important;
         border-radius: 0px !important;
-        
+        font-size: 14px;
     }
     
     .tabs .content{
@@ -380,8 +394,9 @@ margin-top: 5px;
             display: block;
         }
         .home-para{
-            font-size: 14px;
-    font-weight: 500;
+            font-size: 15px;
+            font-weight: normal;
+            font-family: 'Roboto-Regular';
         }
     
     .tabs img {
@@ -395,7 +410,9 @@ margin-top: 5px;
     } /* / @media all */
     
     @media (max-width: 900px) {
+
         .tabs {
+
             flex-direction: column;
         }
         .tabs .button-list {
@@ -410,4 +427,77 @@ margin-top: 5px;
             border-right: 1px solid #aaa;
         }
     } /* / @media (max-width: 900px) */
+
+
+    @media only screen and   (min-width:321px) and (max-width:768px){
+        .navbar-collapse{
+z-index: 9;
+        }
+        .order1{
+            order:1!important;
+        }
+        .order2{
+            order: 2!important;
+        }
+        .contact-para:first-child{
+            margin-top: 30px !important;
+        }
+      .margn-20{
+          margin: 0px !important;
+      }
+        .about-image{
+position: static !important;
+        }
+        .about-box{
+            position: static !important;
+            margin-top: 0px;
+        }
+        .about-image img{
+            width:100% !important;
+            height: auto;
+        }
+        .navbar-nav-scroll{
+background-color: #772778;
+padding-left: 20px !important;
+padding-right: 20px !important;
+        }
+        .navbar-toggler-icon {
+            display: block !important;
+            width: 1.5em;
+            height: 3px !important;
+            background-color: #fff !important;
+            border: 1px solid transparent !important;
+            margin: 4px 0px;
+        }
+        .navbar-toggler{
+            border: 2px solid #ffffff !important;
+        }
+        .banner-para{
+            display: none;
+        }
+        .banner_h img{
+            height: auto;
+        }
+        .tabs .button-list {
+         overflow-x: auto !important;
+         width:100%;
+        }
+        .tabs .button-list button, .tabs button:first-child:not(.active){
+            border: 2px solid #772778;
+            min-width: 118px;
+            line-height: 1.3;
+
+        }
+        .tabs button {
+            border-radius: 0;
+            text-align: left;
+            margin: 0;
+            font-size: 12px !important;
+            font-weight: 600 !important;
+            padding: 10px !important;
+        }
+        .tabs button.active::before{
+            display: none;
+        }
+    }
     
