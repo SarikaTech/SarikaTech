@@ -25,11 +25,10 @@ route.get('/contact-us', services.contact)
 route.get('/update-user',services.update_user)
 route.get('/achievement',services.achievement)
 route.get('/services',services.services)
-route.get('/about',services.about)
-//API 
-route.post('/api/users',upload.single('avatar'), controller.create)
-route.get('/api/users', controller.find)
-route.put('/api/users/:id', controller.update)
-route.delete('/api/users/:id', controller.delete)
+route.get('/about',services.about)//API 
+route.post('/view_devusertest/api/users',upload.single('avatar'), controller.create)
+route.get('/view_devusertest/api/users', controller.find)
+route.put('/view_devusertest/api/users/:id', controller.update)
+route.delete('/view_devusertest/api/users/:id', controller.delete)
 
 module.exports=route

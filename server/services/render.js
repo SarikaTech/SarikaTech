@@ -11,7 +11,7 @@ exports.homeRoutes=(req,res)=>{
     // .catch(err=>{
     //     res.send(err)
     // })
-    res.render('');
+    res.render('index');
    
 }
 exports.contact=(req, res)=>{
@@ -32,7 +32,7 @@ exports.about=(req, res)=>{
 }
 exports.view_devusertest=(req, res)=>{
     //make a get request to users/api
-    axios.get('http://localhost:3000/api/users/')
+    axios.get('http://localhost:3000/view_devusertest/api/users/')
     .then(function(response){
         console.log(response)
         res.render('view_devusertest',{users:response.data});
@@ -43,7 +43,7 @@ exports.view_devusertest=(req, res)=>{
     //res.render('view_devusertest');
 }
 exports.update_user=(req, res)=>{
-    axios.get('http://localhost:3000/api/users',{params:{id:req.query.id}})
+    axios.get('http://localhost:3000/view_devusertest/api/users',{params:{id:req.query.id}})
    .then(function(userdata){
         res.render("update_user",{user:userdata.data})
    })
