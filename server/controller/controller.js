@@ -1,5 +1,5 @@
 const Userdb = require('../model/model');
-var userdb = require('../model/model');
+
 
 
 //create and save new user

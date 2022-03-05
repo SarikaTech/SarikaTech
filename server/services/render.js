@@ -35,7 +35,7 @@ exports.view_devusertest=(req, res)=>{
     axios.get('http://localhost:3000/view_devusertest/api/users')
     .then(function(response){
         console.log(response)
-        res.render('./view_devusertest',{users:response.data});
+        res.render('view_devusertest',{users:response.data});
     })
     .catch(err=>{
         res.send(err)
@@ -45,7 +45,7 @@ exports.view_devusertest=(req, res)=>{
 exports.update_user=(req, res)=>{
     axios.get('http://localhost:3000/view_devusertest/api/users',{params:{id:req.query.id}})
    .then(function(userdata){
-        res.render("./update_user",{user:userdata.data})
+        res.render("update_user",{user:userdata.data})
    })
    .catch(err=>{
        res.send(err);
