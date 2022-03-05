@@ -32,7 +32,7 @@ exports.about=(req, res)=>{
 }
 exports.view_devusertest=(req, res)=>{
     //make a get request to users/api
-    axios.get('http://localhost:3000/view_devusertest/api/users')
+    axios.get('https://sarika-node.herokuapp.com/view_devusertest/api/users')
     .then(function(response){
         console.log(response)
         res.render('view_devusertest',{users:response.data});
@@ -43,7 +43,7 @@ exports.view_devusertest=(req, res)=>{
     //res.render('view_devusertest');
 }
 exports.update_user=(req, res)=>{
-    axios.get('http://localhost:3000/view_devusertest/api/users',{params:{id:req.query.id}})
+    axios.get('https://sarika-node.herokuapp.com/view_devusertest/api/users',{params:{id:req.query.id}})
    .then(function(userdata){
         res.render("update_user",{user:userdata.data})
    })
