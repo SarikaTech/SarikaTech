@@ -9,7 +9,7 @@
     <td><%= users[i].email %></td>     
     <td><%= users[i].coc %></td>
     <td><%= users[i].issued %></td>   
-    <td><a href="<%= users[i].avatar %>"><%= users[i].avatar %></a></td>
+    <td><a href="/<%= users[i].avatar %>"><%= users[i].avatar %></a></td>
 
     <td><a href="/update-user?id=<%=users[i]._id%>" class="ss"><span>edit</span></a>
         <a data-id=<%=users[i]._id%> class="ss delete">   <span>delete</span></a></td>
