@@ -1,11 +1,7 @@
-$("#add_user").submit(function(event){
-    alert("data insertes successfully")
-})
+const actualBtn = document.getElementById("actual-btn");
 
+const fileChosen = document.getElementById("file-chosen");
 
-var selector = '.nav li';
-
-$(selector).on('click', function(){
-    $(selector).removeClass('activea');
-    $(this).addClass('activea');
+actualBtn.addEventListener("change", function () {
+  fileChosen.textContent = this.files[0].name;
 });
